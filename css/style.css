@@ -1,0 +1,273 @@
+/* General Styles */
+
+body {
+    font-family: 'Noto Serif', serif;
+}
+
+a.skip-to-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-to-main:focus,
+.skip-to-main:active {
+    color: #fff;
+    background-color: #000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 10px 35%;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 999;
+}
+
+main {
+    padding-top: 64px;
+
+}
+
+footer {
+    margin-top: 128px !important;
+    background-color: rgb(249, 249, 249);
+    padding: 24px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2vw;
+}
+
+
+h1 {
+    font-size: 5.5em;
+    margin: 128px 0 0 0;
+    text-transform: uppercase;
+    font-family: 'Halvetica', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 3em;
+    margin: 150px 0 24px 0;
+    border-bottom: 1px solid goldenrod;
+    padding-bottom: 12px;
+}
+
+
+
+h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    margin: 48px 0 16px 0;
+}
+
+
+p {
+    margin-bottom: 12px;
+    line-height: 1.75em;
+}
+
+img {
+    border-radius: 4px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+main ul {
+    list-style-type: square;
+    margin-left: 30px;
+}
+
+main ol {
+    list-style: armenian;
+    margin-left: 30px;
+}
+
+
+/* header * {border: 1px solid green;} */
+
+
+
+/* Navigation Styling */
+
+nav {
+    border-bottom: 1px solid rgb(234, 234, 234);
+    padding: 24px 0;
+    background-color: rgb(248, 248, 248);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 24px 0 36px;
+}
+
+#logo {
+    font-size: 2em;
+    font-weight: bold;
+    height: 100px;
+    margin: 0;
+    padding-top: 16px;
+}
+
+nav ul {
+    display: flex;
+    box-sizing: border-box;
+    /* justify-content: space-between;
+    width:50%; */
+
+}
+
+nav ul li {
+    padding: 10px 20px;
+    margin-left: 24px;
+    border-radius: 8px;
+}
+
+nav ul li:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+
+
+nav ul li:first-child {
+    margin-left: 0 !important;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.active {
+    font-weight: bold;
+    border-bottom: 2px solid goldenrod;
+    padding-bottom: 2px;
+
+}
+
+
+/* Gallery Styles */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+
+.gallery img,
+.video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.gallery h3 {
+    border-bottom: 1px solid goldenrod;
+    padding-bottom: 8px;
+}
+
+.header-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 36px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.gallery img:hover,
+.video:hover {
+    width: 105%;
+    transition: all .25s ease-in-out;
+    transform: scale(1.1);
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 4px;
+
+}
+
+.img-hide {
+    display: none;
+}
+
+.list-bg {
+    background-color: rgb(247, 247, 247);
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid rgb(231, 231, 231);
+}
+
+
+@media only screen and (max-width:850px) {
+    .nav-container {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    #logo {
+        text-align: center;
+    }
+}
+
+
+
+@media only screen and (max-width:600px) {
+    .gallery {
+        display: block;
+    }
+
+    .gallery img {
+        height: 300px;
+    }
+}
+
+
+@media (prefers-reduced-motion) {
+    .header-gif {
+        display: none;
+    }
+
+    .header-img {
+        display: block;
+
+    }
+}
